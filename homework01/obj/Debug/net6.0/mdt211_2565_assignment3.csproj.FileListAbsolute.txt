@@ -1,0 +1,15 @@
+C:\Users\fanta\Desktop\1117\1117\bin\Debug\net6.0\mdt211_2565_assignment3.exe
+C:\Users\fanta\Desktop\1117\1117\bin\Debug\net6.0\mdt211_2565_assignment3.deps.json
+C:\Users\fanta\Desktop\1117\1117\bin\Debug\net6.0\mdt211_2565_assignment3.runtimeconfig.json
+C:\Users\fanta\Desktop\1117\1117\bin\Debug\net6.0\mdt211_2565_assignment3.dll
+C:\Users\fanta\Desktop\1117\1117\bin\Debug\net6.0\ref\mdt211_2565_assignment3.dll
+C:\Users\fanta\Desktop\1117\1117\bin\Debug\net6.0\mdt211_2565_assignment3.pdb
+C:\Users\fanta\Desktop\1117\1117\obj\Debug\net6.0\mdt211_2565_assignment3.csproj.AssemblyReference.cache
+C:\Users\fanta\Desktop\1117\1117\obj\Debug\net6.0\mdt211_2565_assignment3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\fanta\Desktop\1117\1117\obj\Debug\net6.0\mdt211_2565_assignment3.AssemblyInfoInputs.cache
+C:\Users\fanta\Desktop\1117\1117\obj\Debug\net6.0\mdt211_2565_assignment3.AssemblyInfo.cs
+C:\Users\fanta\Desktop\1117\1117\obj\Debug\net6.0\mdt211_2565_assignment3.csproj.CoreCompileInputs.cache
+C:\Users\fanta\Desktop\1117\1117\obj\Debug\net6.0\mdt211_2565_assignment3.dll
+C:\Users\fanta\Desktop\1117\1117\obj\Debug\net6.0\ref\mdt211_2565_assignment3.dll
+C:\Users\fanta\Desktop\1117\1117\obj\Debug\net6.0\mdt211_2565_assignment3.pdb
+C:\Users\fanta\Desktop\1117\1117\obj\Debug\net6.0\mdt211_2565_assignment3.genruntimeconfig.cache
