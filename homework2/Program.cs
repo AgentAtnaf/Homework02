@@ -4,88 +4,72 @@
     {
         int exit = 1;
         int x = -1;
-        int split = 0;
         CircularLinkedList<char> circularLinkedList = new CircularLinkedList<char>();
+        Queue<char> queue = new Queue<char>();
         Console.WriteLine("Input.");
         do
         {
           x++;
           circularLinkedList.Add(char.Parse(Console.ReadLine()));
-          char checkout = circularLinkedList.Get(x);
-          if(checkout == 'L' || checkout == 'M' || checkout == 'S')
+          if(circularLinkedList.Get(x) != 'L' && circularLinkedList.Get(x) != 'M' && circularLinkedList.Get(x) != 'S')
           {
-            if(checkout == 'L')
-            {
-                circularLinkedList.Remove(x);
-                circularLinkedList.Insert(x,'1');
-            }
-            else if(checkout == 'M')
-            {
-                circularLinkedList.Remove(x);
-                circularLinkedList.Insert(x,'2');
-            }
-            else if(checkout == 'S')
-            {
-                circularLinkedList.Remove(x);
-                circularLinkedList.Insert(x,'3');
-            }
-            exit = 0;
-          }
-          else 
-          {
-            exit = 1;
             circularLinkedList.Remove(x);
+            exit = 1;
+          }
+          else if(circularLinkedList.Get(x) == 'L')
+          {
+            circularLinkedList.Set(x,'1');
+            queue.Push('1');
+                      exit = 0;
+          }
+          else if(circularLinkedList.Get(x) == 'M')
+          {
+            circularLinkedList.Set(x,'2');
+            queue.Push('2');
+                      exit = 0;
+          }
+          else if(circularLinkedList.Get(x) == 'S')
+          {
+            circularLinkedList.Set(x,'3');
+            queue.Push('3');
+                      exit = 0;
           }
         }
         while( exit == 0);
 
-         
-        for(int i = 0; i < circularLinkedList.GetLength(); i++)
+        int l = 0;
+        int n = 0;
+        while(l == 0)
         {
-        //Console.WriteLine(circularLinkedList.GetLength());
-        Console.Write(circularLinkedList.Get(i));
-        }
-               
-        while(split == 0)
+        for(n = 0; n < queue.GetLength(); n++)
         {
-        for(int i = 0; i < circularLinkedList.GetLength();i++)
-        {
-            if(circularLinkedList.Get(i) == '3' || circularLinkedList.Get(i) == '2' || circularLinkedList.Get(i) == '1')
+            if(queue.Get(n) == '1')
             {
-                if(circularLinkedList.Get(i) == '1')
-                {
-                    circularLinkedList.Set(i,'2');
-                    Console.Write(" (4) {0} |{1}|",circularLinkedList.Get(i),i);
-                    circularLinkedList.Insert(i+1,'2');
-                    Console.Write(" (5) {0} |{1}|",circularLinkedList.Get(i+1),i+1);
-                    i++;
-                }
-                else if(circularLinkedList.Get(i) == '2')
-                {
-                    circularLinkedList.Set(i,'3');
-                    Console.Write(" (1) {0} |{1}|",circularLinkedList.Get(i),i);
-                    circularLinkedList.Insert(i+1,'3');
-                    Console.Write(" (2) {0} |{1}|",circularLinkedList.Get(i+1),i+1);
-                    circularLinkedList.Insert(i+2,'3');
-                    Console.Write(" (3) {0} |{1}|",circularLinkedList.Get(i+2),i+2);
-                    i = i + 2;
-                }
-                else if(circularLinkedList.Get(i) == '3')
-                {
-                    circularLinkedList.Remove(i);
-                    i--;
-                }
-                else
-                {
-                    split = 0;
-                }
+              queue.Push('2');
+              queue.Push('2');
             }
-            else 
+            else if(queue.Get(n) == '2')
             {
-                split = 1;
-            }    
+              queue.Push('3');
+              queue.Push('3');
+              queue.Push('3');
+            }
         }
-        split = 1;
-    }   
+        for( n = 0; n < queue.GetLength(); n++)
+            {
+            //Console.WriteLine(circularLinkedList.GetLength());
+             Console.Write(queue.Get(n));
+            }
+            if(n == queue.GetLength())
+            {
+              l = 1;
+            }
+        }
+    }  
 }
-}
+
+/*for(int l = 0; l < circularLinkedList.GetLength(); l++)
+            {
+            //Console.WriteLine(circularLinkedList.GetLength());
+             Console.Write(circularLinkedList.Get(l));
+            }*/
